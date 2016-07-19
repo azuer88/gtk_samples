@@ -14,6 +14,9 @@ class Handler:
     def onDeleteWindow(self, *args):
         Gtk.main_quit(args)
 
+    def MainWindow_delete_cb(self, *args):
+	Gtk.main_quit()
+
 builder = Gtk.Builder()
 builder.add_from_file("sample.glade")
 builder.connect_signals(Handler())
